@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Music Recommendation Service</h1>
+        <p>Discover new music based on your preferences!</p>
+        <form action="{{ url_for('recommend') }}" method="post">
+            <input type="text" name="song" placeholder="Enter a song name">
+            <button type="submit">Recommend</button>
+        </form>
+        <div class="recommendations">
+            <h2>Recommended Songs</h2>
+            <ul>
+                {% for song in recommended_songs %}
+                    <li>{{ song }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
