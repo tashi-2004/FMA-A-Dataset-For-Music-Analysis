@@ -36,8 +36,6 @@ def find_nearest_neighbors(ann_index, track_embeddings, track_id, num_neighbors=
     nearest_neighbor_ids = ann_index.get_nns_by_item(track_id, num_neighbors)
     nearest_neighbors = [track_embeddings[neighbor_id] for neighbor_id in nearest_neighbor_ids]
     return nearest_neighbors
-
-# Example usage
 if _name_ == "_main_":
     # Generate random track embeddings (replace this with your actual data loading code)
     num_tracks = 100000  # Number of tracks
@@ -54,8 +52,17 @@ if _name_ == "_main_":
     # Later, you can load the index from disk
     ann_index_loaded = load_ann_index(index_filename, embedding_dim)
 
-    # Example: Perform nearest neighbor search for track with ID 123
-    track_id = 123
+    # Prompt the user to input a track ID
+    while True:
+        try:
+            track_id = int(input("Enter a track ID (0 to {}): ".format(num_tracks - 1)))
+            if track_id < 0 or track_id >= num_tracks:
+                raise ValueError("Track ID must be between 0 and {}".format(num_tracks - 1))
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
+
+    # Perform nearest neighbor search for the input track ID
     num_neighbors = 5
     nearest_neighbors = find_nearest_neighbors(ann_index_loaded, track_embeddings, track_id, num_neighbors)
     print("Nearest neighbors of track {}: {}".format(track_id, nearest_neighbors))
