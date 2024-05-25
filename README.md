@@ -16,7 +16,7 @@ This repository contains scripts for analyzing music features, training recommen
 ## Setup
 1. **Clone the Repository**: Clone or download the repository to your local machine.
     ```bash
-    git clone <repository-url>
+    git clone <https://github.com/tashi-2004/BDA-PROJECT-FMA-A-Dataset-For-Music-Analysis>
     ```
 2. **Install Dependencies**: Install the required Python dependencies using:
     ```bash
