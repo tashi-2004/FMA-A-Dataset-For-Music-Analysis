@@ -43,7 +43,7 @@ Then, you got various sizes of MP3-encoded audio data:
 ## Setup
 1. **Clone the Repository**: Clone or download the repository to your local machine.
     ```bash
-    git clone <https://github.com/tashi-2004/BDA-PROJECT-FMA-A-Dataset-For-Music-Analysis>
+    git clone <https://github.com/tashi-2004/FMA-A-Dataset-For-Music-Analysis>
     ```
 3. **Set Up MongoDB**: Ensure MongoDB is installed and running on your system. Update MongoDB connection strings in the relevant scripts.
 4. **Set Up Kafka**: Install and run Apache Kafka on your system. Update the Kafka broker address in `producer.py` and `consumer.py`.
