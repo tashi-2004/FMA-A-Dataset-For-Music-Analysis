@@ -78,6 +78,6 @@ You can customize the scripts according to your requirements, such as adjusting 
 ## Contributors
 - Tashfeen Abbasi
 - [Laiba Mazhar](https://github.com/laiba-mazhar)
-- [Rafia Khan](https://github.com/rakhan2)
+- [Rafia Khan](https://github.com/rafiahkhan)
 
 Feel free to contribute to this project by submitting issues or pull requests. Enjoy analyzing and recommending music with this comprehensive toolkit!
